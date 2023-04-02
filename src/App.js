@@ -214,7 +214,11 @@ function App() {
         }
     };
 
-    const onMapClick = (latlng) => setLastMapClick([latlng.lat, latlng.lng]);
+    const onMapClick = (latlng) => {
+        setLastMapClick([latlng.lat, latlng.lng]);
+        if (isDetailView)
+            switchToOverview();
+    };
 
     return (
         <PanelGroup className="App" direction="horizontal">
