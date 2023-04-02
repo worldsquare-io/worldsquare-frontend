@@ -115,14 +115,14 @@ select:focus {
     flex-direction: column;
 }
 
-.color-region {
+/* .color-region {
     width: 2em;
     height: 0.2em;
     background-color: rgb(184, 255, 204);
     border-radius: 10px;
     margin-top: 0.5em;
     margin-bottom: -0.5em;
-}
+} */
 
 img {
     object-fit: cover;
