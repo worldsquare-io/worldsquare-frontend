@@ -17,16 +17,20 @@ const OurSidebarCreate = ({ lastMapClick, switchToOverview, switchToDetail }) =>
     const [text, setText]                   = useState("");
     const  onLocationToggleClick            = (useLocal) => setCustomLocEnab(!useLocal);
     const  onFormSubmit                     = () => {
+
+        if (text.trim() === "")
+            return;
+
         let promise = null;
         if (!customLocEnab)
         {
             promise = getPosition()
                 .then((pos) => [pos.coords.latitude, pos.coords.longitude])
-                .then((pos) => createPost(text, pos, "local"))
+                .then((pos) => createPost(text.trim(), pos, "local"))
         }
         else
         {
-            promise = createPost(text, lastMapClick, "remote");
+            promise = createPost(text.trim(), lastMapClick, "remote");
         }
 
         promise.then(() => switchToOverview());

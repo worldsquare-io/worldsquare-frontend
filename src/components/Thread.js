@@ -15,7 +15,10 @@ function Thread({ parentItem, childItems, onRequestRefresh, onRequestReturn }) {
     function handleInputMessage(e) {
         e.preventDefault();
 
-        postComment(parentItem._id, text)
+        if (text.trim() === "")
+            return;
+
+        postComment(parentItem._id, text.trim())
             .then(() => onRequestRefresh())
             .catch((err) => console.err("Failed to post comment:", err));
 
