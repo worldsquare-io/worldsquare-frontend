@@ -2,7 +2,7 @@ import { Card, Badge } from "react-bootstrap";
 
 function Post({ title, variant }) {
     return (
-        <Card className="mt-2">
+        <Card className="mt-2 mb-2">
             <Card.Header>
                 <Badge>{variant}</Badge>
             </Card.Header>

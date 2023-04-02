@@ -12,9 +12,9 @@ function Comment({ message, timestamp }) {
 
     return (
         <div>
-            <div className="post" id="comment">
+            <div className="post mb-1 p-1" id="comment">
+                <div className="color-region"></div>
                 <div className="message-container p-1">
-                    {/* <div className="color-region"></div> */}
                     <p>{message}</p>
                 </div>
                 <div className="timestamp-container">

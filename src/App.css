@@ -1,4 +1,4 @@
-.Thread {
+/* .Thread {
     background-color: rgb(247, 247, 247);
     margin: 5%;
     margin-top: 10px;
@@ -7,35 +7,34 @@
     grid-column: 4;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     padding: 0.5em;
-}
+} */
 
-.App {
+/* .App {
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
+} */
 
-.Map {
+/* .Map {
     background-color: white;
     grid-column: 1 / span 3;
-}
+} */
 
-.thread-container {
+/* .thread-container {
     background-color: rgb(247, 247, 247);
     border-radius: 20px;
     grid-column: 4;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     margin: 5%;
-}
+} */
 
 .post {
     text-align: left;
     font-weight: bold;
     font-size: 1.3em;
     background-color: white;
-    margin: 5px;
+    /* margin: 5px; */
     border-radius: 10px;
-    padding: 3px 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
@@ -75,19 +74,19 @@ select:focus {
     outline: none;
 }
 
-.send-button {
+/* .send-button {
     justify-content: space-between;
-    /* border: red solid 1px; */
+    border: red solid 1px;
     padding: 7px;
     grid-column: 4;
     cursor: pointer;
-}
+} */
 
-.comment-container {
+/* .comment-container {
     height: 77vh;
     overflow-y: auto;
     position: relative;
-}
+} */
 
 .timestamp-container {
     text-align: right;
