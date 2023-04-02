@@ -159,6 +159,7 @@ const makeSidebarDetail = (parentItem, childItems, onRequestRefresh, onRequestRe
 };
 
 function App() {
+    const [isOverview, setIsOverview]     = useState(true);
     const [isCreateView, setIsCreateView] = useState(false);
     const [lastMapClick, setLastMapClick] = useState([0, 0]);
     const [parentItems, setParentItems]   = useState([]);
@@ -169,6 +170,7 @@ function App() {
             .then((parItems) => {
 
                 setIsCreateView(false);
+                setIsOverview(true);
                 setParentItems(parItems);
                 setChildItems([]);
 
@@ -181,6 +183,7 @@ function App() {
             .then((childItems) => {
 
                 setIsCreateView(false);
+                setIsOverview(false);
                 setParentItems([parentPin]);
                 setChildItems(childItems);
 
@@ -192,12 +195,12 @@ function App() {
     
     const switchToCreate = () => {
         setIsCreateView(true);
+        setIsOverview(false);
         setParentItems([]);
         setChildItems([]);
     }
 
     const isDetailView   = parentItems.length === 1;
-    const isOverview     = !isDetailView && !isCreateView;
 
     const onPinClick = (pinId) => {
         let parentId = parentItems.find((item) => item._id === pinId);
