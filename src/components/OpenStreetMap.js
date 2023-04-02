@@ -14,7 +14,7 @@ const createMarkerIcon = (variant) => {
         html: renderToStaticMarkup(
             <FaMapMarkerAlt 
                 size={24} 
-                color={(variant==="local") ? 'black' : 'red'} 
+                color={(variant==="local") ? 'green' : 'black'} 
             />
         ),
         iconAnchor: [12, 24],

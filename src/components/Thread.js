@@ -35,6 +35,7 @@ function Thread({ parentItem, childItems, onRequestRefresh, onRequestReturn }) {
                             key={item._id}
                             message={item.message}
                             timestamp={item.timestamp}
+                            distance={item.distance}
                         />)}
                 {/* </div> */}
             </Container>

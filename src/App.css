@@ -36,6 +36,7 @@
     /* margin: 5px; */
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: 1px rgb(215, 215, 215) solid;
 }
 
 #comment {
@@ -88,7 +89,21 @@ select:focus {
     position: relative;
 } */
 
+
+.timestamp-dist-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .timestamp-container {
+    text-align: right;
+    font-weight: lighter;
+    font-size: 0.8em;
+    padding: 0.3em;
+}
+
+.distance-container {
     text-align: right;
     font-weight: lighter;
     font-size: 0.8em;
